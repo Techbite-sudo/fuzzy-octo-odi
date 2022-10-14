@@ -1,0 +1,25 @@
+
+
+type Query {
+  FetchUsers:[UserData!]!
+}
+
+input Creds {
+  phone: String!
+  password: String!
+}
+
+type UserData {
+  id: String!
+  token: String!
+  balance: String!
+  bonus: String!
+  phone: String!
+  name: String!
+}
+
+type Mutation {
+  AddUser(input: Creds!): UserData!
+}
+
+# go get github.com/99designs/gqlgen@v0.17.20 && go get github.com/99designs/gqlgen@v0.17.20 && go get github.com/99designs/gqlgen/codegen/config@v0.17.20
